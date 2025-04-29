@@ -1,4 +1,4 @@
-handleObject({
-//     username: "sam",
-//     price: 399
-// })
+t chai =  ()=> {
+//     let username = "hitesh"
+//     console.log(this.username);
+// }
