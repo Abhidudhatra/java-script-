@@ -33,4 +33,5 @@ const userone =  new user("abhi",12,true)
 console.log(userone.constructor)
 
 
+
 //console.log(usertwo);
