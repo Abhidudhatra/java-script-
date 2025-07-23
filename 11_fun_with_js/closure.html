@@ -7,6 +7,9 @@
 </head>
 <body style="background-color: #313131;">
 
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+
     
     
 </body>
@@ -24,28 +27,68 @@
     // }
     // init();
 
-    function outer(){
-        let username ="hitesh"
+    // function outer(){
+    //     let username ="hitesh"
         
-        function inner(){
-            let secret ="my123"
-            console.log(username);
+    //     function inner(){
+    //         let secret ="my123"
+    //         console.log(username);
 
-            function innewtwo(){
-                console.log(secret);
+    //         function innewtwo(){
+    //             console.log(secret);
                 
-            }
-            innewtwo();
+    //         }
+    //         innewtwo();
             
-        }
-        inner();
+    //     }
+    //     inner();
         
-    }
-    outer();
+    // }
+    // outer();
 
-    //console.log("TOOUTER",username);
+    // //console.log("TOOUTER",username);
+    
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+
+ 
+    const myFunc = makeFunc();
+    myFunc();
+
+
     
     
+
+
+</script>
+
+
+<script>
+
+    // document.getElementById("orange").onclick=function(){
+    //     document.body.style.backgroundColor='orange'
+    // }
+
+    // document.getElementById("green").onclick=function(){
+    //     document.body.style.backgroundColor='green'
+    // }
+
+    function clickhandler (color){
+        // document.body.style.backgroundColor=`${color}`
+        return function(){
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    document.getElementById('orange').onclick=clickhandler("orange")
+
+    document.getElementById('green').onclick=clickhandler("green")
+
 
 </script>
 </html>
